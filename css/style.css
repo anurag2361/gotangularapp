@@ -1,0 +1,62 @@
+.bookbutton{
+	width: 300px;
+	background-color: #64B5F6;
+	margin-left: 20px;
+	height: 50px;
+}
+
+.characterbutton{
+	width: 300px;
+	margin-left: 20px;
+	background-color: #EF5350;
+	height: 50px;
+}
+
+.housebutton{
+	width: 300px;
+	margin-left: 20px;
+	height: 50px;
+	background-color: #4DB6AC;
+}
+
+.spantext{
+	font-weight: bold;
+	color: white;
+	font-size: 25px;
+}
+
+.bookbutton:hover, .characterbutton:hover, .housebutton:hover{
+	color: red !important;
+}
+
+.sortbutton{
+	background-color: green;
+	margin-right: 20px;
+}
+
+.b1{
+	width:80%;
+	min-height:200px;
+	background:#64B5F6;
+	margin:40px auto;
+  padding: 5px;
+  color: white;
+}
+
+.c1{
+	width:80%;
+	min-height:200px;
+	background:#EF5350;
+	margin:40px auto;
+  padding: 5px;
+  color: white;
+}
+
+.h1{
+	width:80%;
+	min-height:200px;
+	background:#4DB6AC;
+	margin:40px auto;
+  padding: 5px;
+  color: white;
+}

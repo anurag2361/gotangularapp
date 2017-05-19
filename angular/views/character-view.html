@@ -1,0 +1,74 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<a class="btn btn-default" style="margin-top: 20px; margin-left: 50%;color: blue;" ng-href="#/">Go To Homepage</a><!-- remember to use a instead of buton as buton cannot be a reference to a link -->
+		</div>
+	</div>
+	<br>
+
+	<table class="table table-striped table-bordered">
+	<tr>
+	<th ng-show="gotCharacter.character.name" colspan="2">Character Name: {{gotCharacter.character.name}}
+	</th>
+	</tr>
+	
+	<tr>
+		<td>Gender:</td>
+		<td>{{gotCharacter.character.gender}}</td>
+	</tr>
+	<tr>
+		<td>Culture:</td>
+		<td>{{gotCharacter.character.culture}}</td>
+	</tr>
+	<tr>
+		<td>Born:</td>
+		<td>{{gotCharacter.character.born}}</td>
+	</tr>
+	<tr>
+		<td>Died:</td>
+		<td>{{gotCharacter.character.died}}</td>
+	</tr>
+	<tr>
+		<td>Title:</td>
+		<td>{{gotCharacter.character.title}}</td>
+	</tr>
+	<tr>
+		<td>Aliases:</td>
+		<td ng-repeat="alias in gotCharacter.character.aliases">{{alias}}</td>
+	</tr>
+	<tr>
+		<td>Father:</td>
+		<td>{{gotCharacter.character.father}}</td>
+	</tr>
+	<tr>
+		<td>Mother:</td>
+		<td>{{gotCharacter.character.mother}}</td>
+	</tr>
+	<tr>
+		<td>Spouse:</td>
+		<td>{{gotCharacter.character.spouse}}</td>
+	</tr>
+	<tr>
+		<td>Allegiances:</td>
+		<td><span ng-repeat="allegiance in gotCharacter.character.allegiances"><a ng-href="{{allegiance.replace('https://anapioficeandfire.com/api/houses','#/view-house')}}" title="View">{{allegiance.replace('https://anapioficeandfire.com/api/houses','#/view-house')}}</a><br><br></span></td>
+	</tr>
+	<tr>
+		<td>Books:</td>
+		<td><span ng-repeat="characterbooks in gotCharacter.character.books"><a ng-href="{{book.replace('https://anapioficeandfire.com/api/books','#/view-book')}}" title="View">{{book.replace('https://anapioficeandfire.com/api/books','#/view-book')}}</a><br><br></span></td><!-- there are numerous cel values so span was needed. -->
+	</tr>
+	<tr>
+		<td>POV Books:</td>
+		<td>{{gotCharacter.character.povBooks}}</td>
+	</tr>
+	<tr>
+		<td>TV Series:</td>
+		<td ng-repeat="tv in gotCharacter.character.tvSeries">{{tv}}<br><br></td>
+	</tr>
+	<tr>
+		<td>Played By:</td>
+		<td ng-repeat="played in gotCharacter.character.playedBy">{{played}}<br><br></td>
+	</tr>
+	</table>
+
+	
+</div>

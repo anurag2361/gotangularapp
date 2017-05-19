@@ -1,0 +1,39 @@
+<!-- filters will appear here, when the user click over show book button. They will not be displayed by default. -->
+
+<div class="container-fluid" style="margin-top: 20px;">
+	<div class="row">
+
+		<div class="col-lg-6 col-md-6 col-sm-12">
+			<a class="btn btn-default sortbutton" ng-click="mytoggle=!mytoggle">Sort By Name</a>
+		</div>
+
+		<div class="col-sm-12 col-md-6 col-lg-6">
+			<input type="text" class="form-control inputdefault " placeholder="Filter by Character" ng-model="charactername">
+		</div>
+
+		
+	</div>
+
+
+</div>
+
+<div class="c1" ng-repeat="character in gotList.characters | orderBy:!mytoggle?'name':'-name' | filter:charactername" style="cursor: pointer;" onmouseover="this.style.background='white' , this.style.color='black';" onmouseout="this.style.background='#e74c3c' , this.style.color='white';">
+  <a ng-href="#/view-character/{{ character.url.replace('https://anapioficeandfire.com/api/characters/' ,'') }}">
+    <div>
+      <p>#{{$index +1}}</p>
+      <h3>Name:  {{character.name}} <br>Gender: {{character.gender}} <br> Culture:  {{character.culture}}</h3>
+    </div>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

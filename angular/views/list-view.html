@@ -1,0 +1,31 @@
+<div class="container-fluid">
+
+	<div class="btn-group btn-group-justified" role="group" aria-label="Show" style="margin-top: 60px">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<a class="btn btn-default bookbutton"><span class="spantext" ng-click="gotList.shBooks()">Show Books</span></a>
+			</div>
+
+
+			<div class="col-lg-4 col-md-4 col-sm-12">
+
+				<a class="btn btn-default characterbutton"><span class="spantext" ng-click="gotList.shCharacter()">Show Characters</span></a>
+			</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<a class="btn btn-default housebutton"><span class="spantext" ng-click="gotList.shHouse()">Show Houses</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="books" ng-show="gotList.bookShow"><book-data></book-data>
+</div>
+<div class="characters" ng-show="gotList.characterShow">
+	<character-data></character-data>
+</div>
+<div class="houses" ng-show="gotList.houseShow">
+	<house-data></house-data>
+</div>
+	
+</div>

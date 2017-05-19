@@ -1,0 +1,39 @@
+<!-- filters will appear here, when the user click over show book button. They will not be displayed by default. -->
+
+<div class="container-fluid" style="margin-top: 20px;">
+	<div class="row">
+
+		<div class="col-lg-6 col-md-6 col-sm-12">
+			<a class="btn btn-default sortbutton" ng-click="mytoggle=!mytoggle">Sort By Name</a>
+		</div>
+
+		<div class="col-sm-12 col-md-6 col-lg-6">
+			<input type="text" class="form-control inputdefault " placeholder="Filter by House" ng-model="housename">
+		</div>
+
+		
+	</div>
+
+
+</div>
+
+<div class="h1" ng-repeat="house in gotList.houses | orderBy:!mytoggle?'name':'-name' | filter:housename" style="cursor: pointer;" onmouseover="this.style.background='white' , this.style.color='black';" onmouseout="this.style.background='#4DB6AC' , this.style.color='white';">
+  <a ng-href="#/view-house/{{ house.url.replace('https://anapioficeandfire.com/api/houses/' ,'') }}">
+    <div>
+      <p>#{{$index +1}}</p>
+      <h3>Name:  {{house.name}} <br>Region: {{house.region}} <br> Coat Of Arms:  {{house.coatOfArms}}</h3>
+    </div>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

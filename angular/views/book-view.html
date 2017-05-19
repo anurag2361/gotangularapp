@@ -1,0 +1,53 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<a class="btn btn-default" style="margin-top: 20px; margin-left: 50%;color: blue;" ng-href="#/">Go To Homepage</a><!-- remember to use a instead of buton as buton cannot be a reference to a link -->
+		</div>
+	</div>
+	<br>
+	
+	<table class="table table-striped table-bordered">
+	<tr>
+	<th ng-show="gotBook.books.name" colspan="2">Book Name: {{gotBook.books.name}}
+	</th>
+	</tr>
+	<tr>
+		<td>ISBN: </td><!-- books from bookcontroller.js -->
+		<td ng-show="gotBook.books.isbn">{{gotBook.books.isbn}}</td>
+	</tr>
+	<tr>
+		<td>Author:</td>
+		<td>{{gotBook.books.authors}}</td>
+	</tr>
+	<tr>
+		<td>Number Of Pages:</td>
+		<td>{{gotBook.books.numberOfPages}}</td>
+	</tr>
+	<tr>
+		<td>Publisher:</td>
+		<td>{{gotBook.books.publisher}}</td>
+	</tr>
+	<tr>
+		<td>Country:</td>
+		<td>{{gotBook.books.country}}</td>
+	</tr>
+	<tr>
+		<td>Media Type:</td>
+		<td>{{gotBook.books.mediaType}}</td>
+	</tr>
+	<tr>
+		<td>Released:</td>
+		<td>{{gotBook.books.released}}</td>
+	</tr>
+	<tr>
+		<td>Characters:</td>
+		<td><span ng-repeat="character in gotBook.books.characters"><a ng-href="{{character.replace('https://anapioficeandfire.com/api/characters','#/view-character')}}" title="View">{{character.replace('https://anapioficeandfire.com/api/characters','#/view-character')}}</a><br><br></span></td><!-- there are numerous cel values so span was needed. -->
+	</tr>
+	<tr>
+		<td>POV Characters:</td>
+		<td><span ng-repeat="povcharacter in gotBook.books.povCharacters"><a ng-href="{{povcharacter.replace('https://anapioficeandfire.com/api/characters','#/view-character')}}" title="View">{{povcharacter.replace('https://anapioficeandfire.com/api/characters','#/view-character')}}</a><br><br></span></td>
+	</tr>
+	</table>
+
+	
+</div>

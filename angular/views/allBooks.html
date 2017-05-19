@@ -1,0 +1,41 @@
+<!-- filters will appear here, when the user click over show book button. They will not be displayed by default. -->
+
+<div class="container-fluid" style="margin-top: 20px;">
+	<div class="row">
+
+		<div class="col-lg-4 col-md-4 col-sm-12">
+			<a class="btn btn-default sortbutton" ng-click="mytoggle=!mytoggle">Sort By Name</a>
+		</div>
+
+		<div class="col-sm-12 col-md-4 col-lg-4">
+			<input type="text" class="form-control inputdefault " placeholder="Filter by Author" ng-model="authorname">
+		</div>
+
+		<div class="col-sm-12 col-md-4 col-lg-4">
+			<input type="text" class="form-control inputdefault " placeholder="Filter by Bookname" ng-model="bookname.name">
+		</div>
+	</div>
+
+
+</div>
+
+<div class="b1" ng-repeat="book in gotList.books | orderBy:!mytoggle?'name':'-name' | filter:authorname | filter:bookname" style="cursor: pointer;" onmouseover="this.style.background='white' , this.style.color='black';" onmouseout="this.style.background='#64B5F6' , this.style.color='white';">
+  <a ng-href="#/view-book/{{ book.url.replace('https://anapioficeandfire.com/api/books/' ,'') }}">
+    <div>
+      <p>#{{$index +1}}</p>
+      <h3>"{{book.name}}" <br>By <br> <span ng-repeat= 'author in book.authors  '>   "{{author}}"   </span></h3>
+    </div>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
