@@ -25,8 +25,5 @@ myApp.config(['$routeProvider',function($routeProvider) {
 		controllerAs:'gotHouse'
 	})
 
-	.otherwise({
-      //redirectTo:'/' //we have a better option
-      template: '<div class="notFound"><h1>404 page not found</h1><hr><a href="#/" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-home"></span> Go To HomePage</a></div>'
-    });
+	
 }]);

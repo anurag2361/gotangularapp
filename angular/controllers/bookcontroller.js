@@ -7,7 +7,7 @@ myApp.controller('bookController', ['$http', 'gotService', '$routeParams' ,funct
 	console.log(this.bookid);
 	this.baseUrl='https://anapioficeandfire.com/api/';
 
-	this.loadBook = function(){
+	this.loadBook = function(){  //To load a single book
 		gotService.listBook(main.bookid)//pass this to recieve id
 		.then(function success(response){
 			console.log(response);
